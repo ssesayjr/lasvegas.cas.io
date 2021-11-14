@@ -26,8 +26,11 @@
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog modal-md">
-                <center><iframe width="560" height="315" src="https://www.youtube.com/embed/ipwZTmnB8uI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-
+                <!-- 
+                    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/ipwZTmnB8uI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+                --> 
+                <center><video id="myVideo" src="https://www.youtube.com/embed/ipwZTmnB8uI" autoplay style="border-radius:5px;width:100%;"></video></center>
+           
 			</div>
         </div>
     </body>
@@ -44,28 +47,5 @@
         $('#myModal').modal('hide'); 
     }
 
-    var tag = document.createElement('script');
-
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-
-    var player;
-    function onYouTubeIframeAPIReady() {
-        // first video
-        player = new YT.Player('player', {
-            events: {
-                'onReady': function(){ alert("Ready!"); },
-                'onStateChange': onPlayerStateChange
-            }
-        });
-    }
-
-    function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.ENDED) {
-            console.log('player stopped');
-        }
-    }
     
     </script>
