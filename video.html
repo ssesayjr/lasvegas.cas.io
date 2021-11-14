@@ -40,13 +40,14 @@
     <script>
     $("#myModal").modal()
     $(".container").hide();
-    document.getElementById('myVideo').addEventListener('ended', closeModal, false);
+    document.getElementById('myVideo').addEventListener('ended', function() {
+        window.location.href = 'https://ssesayjr.github.io/lasvegas.cas.io/';});
 
     function closeModal() {
 
         $(".container").show();
         $('#myModal').modal('hide'); 
-        window.location = 'https://ssesayjr.github.io/lasvegas.cas.io/';
+        window.location.href = 'https://ssesayjr.github.io/lasvegas.cas.io/';
     }
 
     
