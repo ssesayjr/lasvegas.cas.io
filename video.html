@@ -42,11 +42,14 @@
     $(".container").hide();
     $("#myModal").on('hidden.bs.modal', function (e) {
     $("#myModal iframe").attr("src", $("#myModal iframe").attr("src"));});
+    $("#myModal").on('hidden.bs.modal', function () {window.location.href = 'https://ssesayjr.github.io/lasvegas.cas.io/';});
 
+
+    
+    /*
     document.addEventListener('ended', function() {
-        window.location.href = 'https://ssesayjr.github.io/lasvegas.cas.io/';} );
-
-    /*function closeModal() {
+        } );
+    function closeModal() {
 
         $(".container").show();
         $('#myModal').modal('hide'); 
