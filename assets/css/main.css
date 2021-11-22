@@ -3950,3 +3950,36 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+
+/* Image Swap */ 
+	.swap {
+	background-image: url(https://lh3.googleusercontent.com/-i9NfY6BhnDs/T37JenCFJaI/AAAAAAAAACU/IsWVcNkNC2g/s512-Ic42/IMG_5205%252520copy.jpg);
+	background-repeat: no-repeat;
+	background-size: cover; /* Make background responsive */
+	background-position: center;
+	width: 90%; /* Frame size on small screens */
+	max-width: 512px; /* width of foreground image */
+	margin: 0  auto;
+  	}
+  	.swap a {
+	display: block; /* Fill the frame */
+  	}
+  	.swap a img {
+	opacity: 1; /* Default state */
+	width:100%;
+	height: auto; /* Keep aspect */
+	display: block; /* Remove align-vetical issues */
+	-webkit-transition: all .6s ease-in-out;
+	-moz-transition: all .6s ease-in-out;
+	-o-transition: all .6s ease-in-out;
+	-ms-transition: all .6s ease-in-out;
+	transition: all .6s ease-in-out; /* Soften the transition */
+  	}
+  	.swap a:hover img {
+	opacity: 0; /* Hover state */
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+  	}	
