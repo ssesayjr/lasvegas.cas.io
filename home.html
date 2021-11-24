@@ -31,7 +31,7 @@
 							<li><a href="home.html">Home</a></li>
 							<li><a href="survey.html">Survey</a></li>
 							<li><a href="itinerary.html">Itinerary</a></li>
-							<li><a href="https://github.com/ssesayjr/lasvegas.cas.io/raw/e249f09d8c65eef0c0c3ddc64cfc884a59402bd3/docs/flight_info_update.docx" download>Flight</a></li>
+							<li><a onclick="passwd()">Flight</a></li>
 							<li><a href="gallery.html">Gallery</a></li>
 							<li><a href="video.html">Video</a></li>
 						</ul>
@@ -81,7 +81,7 @@
 									</header>
 								</article>
 								<article>
-									<a href="https://github.com/ssesayjr/lasvegas.cas.io/raw/e249f09d8c65eef0c0c3ddc64cfc884a59402bd3/docs/flight_info_update.docx" download>
+									<a onclick="passwd()">
 									<span class="image">
 										<img src="images/img_1.jpg" alt="" />
 									</span>
@@ -218,6 +218,17 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function passwd(){
+			
+					var password = prompt('Enter the password to download the file:');
+					if(password.toLowerCase() == "cas_las_vegas"){
+					  window.open("docs/flight_info_update.pdf")    
+					}else{
+					  alert("incorrect password!! please try again");
+					}
+				  }
+			</script>
 
 	</body>
 </html>
