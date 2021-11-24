@@ -72,7 +72,7 @@
 
 											<!-- Buttons -->
 												<ul class="actions">
-													<li><a href="https://github.com/ssesayjr/lasvegas.cas.io/raw/e249f09d8c65eef0c0c3ddc64cfc884a59402bd3/docs/flight_info_update.docx" class="button icon solid fa-download" download>Download</a></li>
+													<li><a class="button icon solid fa-download" onclick="passwd()">Download</a></li>
 												</ul>
 										</div>
 									
@@ -206,4 +206,15 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+
+
+	function passwd(){
+
+		var password = prompt('Enter the password to download the file:');
+		if(password.toLowerCase() == "cas_las_vegas"){
+		  window.open("https://github.com/ssesayjr/lasvegas.cas.io/raw/e249f09d8c65eef0c0c3ddc64cfc884a59402bd3/docs/flight_info_update.docx")    
+		}else{
+		  alert("incorrect password!! please try again");
+		}
+	  }
 </html>
